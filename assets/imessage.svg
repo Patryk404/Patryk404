@@ -1,48 +1,53 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="220" viewBox="0 0 800 220" role="img" aria-label="Animated iMessage-style chat">
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="230" viewBox="0 0 800 230" role="img" aria-label="Animated iMessage-style intro">
   <defs>
     <style>
       .message {
         opacity: 0;
         transform-box: fill-box;
         transform-origin: center;
-        animation: show 9s infinite;
+        animation: show 12s infinite;
       }
       .message-1 { animation-delay: 0s; }
       .message-2 { animation-delay: 3s; }
       .message-3 { animation-delay: 6s; }
+      .message-4 { animation-delay: 9s; }
 
       @keyframes show {
-        0% { opacity: 0; transform: translateY(6px); }
-        10% { opacity: 1; transform: translateY(0); }
-        30% { opacity: 1; transform: translateY(0); }
-        40% { opacity: 0; transform: translateY(-2px); }
-        100% { opacity: 0; transform: translateY(-2px); }
+        0% { opacity: 0; transform: translateY(8px) scale(0.96); }
+        12% { opacity: 1; transform: translateY(0) scale(1.02); }
+        22% { opacity: 1; transform: translateY(0) scale(1); }
+        36% { opacity: 0; transform: translateY(-2px) scale(0.98); }
+        100% { opacity: 0; transform: translateY(-2px) scale(0.98); }
       }
 
-      .bubble-left { fill: #e5e5ea; }
-      .bubble-right { fill: #0a84ff; }
-      .text-left { fill: #111111; font: 16px Helvetica, Arial, sans-serif; }
-      .text-right { fill: #ffffff; font: 14px Helvetica, Arial, sans-serif; }
+      .bubble-right { fill: #34c759; }
+      .text-right { fill: #ffffff; font: 15px Helvetica, Arial, sans-serif; text-anchor: middle; }
+      .text-left { text-anchor: start; }
     </style>
   </defs>
 
-  <rect width="800" height="220" fill="#f5f5f7" rx="18" />
+  <rect width="800" height="230" fill="#f5f5f7" rx="18" />
 
   <g class="message message-1">
-    <rect x="40" y="28" width="360" height="56" rx="20" class="bubble-left" />
-    <text x="60" y="62" class="text-left">Hi, this is Patryk</text>
+    <rect x="580" y="16" width="180" height="44" rx="18" class="bubble-right" />
+    <text x="670" y="44" class="text-right">Hi, this is Patryk!</text>
   </g>
 
   <g class="message message-2">
-    <rect x="360" y="84" width="400" height="64" rx="20" class="bubble-right" />
-    <text x="380" y="110" class="text-right">
-      <tspan x="380" dy="0">I study machine learning, data science,</tspan>
-      <tspan x="380" dy="18">and economics at Minerva University</tspan>
+    <rect x="430" y="64" width="330" height="52" rx="18" class="bubble-right" />
+    <text x="450" y="86" class="text-right text-left">
+      <tspan x="450" dy="0">I'm passionate about Data Science,</tspan>
+      <tspan x="450" dy="18">Machine Learning and Economics!</tspan>
     </text>
   </g>
 
   <g class="message message-3">
-    <rect x="40" y="144" width="520" height="56" rx="20" class="bubble-left" />
-    <text x="60" y="178" class="text-left">Take me to a hackathon; let's start with that.</text>
+    <rect x="430" y="120" width="330" height="44" rx="18" class="bubble-right" />
+    <text x="595" y="148" class="text-right">I love aviation and autonomous vehicles!</text>
+  </g>
+
+  <g class="message message-4">
+    <rect x="520" y="172" width="240" height="44" rx="18" class="bubble-right" />
+    <text x="640" y="200" class="text-right">Take me to a hackathon!</text>
   </g>
 </svg>
